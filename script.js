@@ -1,26 +1,28 @@
-const fire = document.querySelector('.fire-inside');
-const img = document.querySelector('img');
-let h2 = document.querySelector('h2');
+const showtime = document.querySelector('.time');
+const btn =  document.querySelector('button');
+const html = document.querySelector('html');
+btn.addEventListener('click',()=>{
+ btn.classList.toggle('dark');
+ html.classList.toggle('dark');
+if(btn.classList.contains('dark')){
+    btn.innerText='light mode';
+}else{
+        btn.innerText='dark mode';
 
-const container = document.getElementsByClassName('container');
-let count =0;
-img.addEventListener('dblclick',(event)=> {
-    console.log('db clicked', ++count);
-    h2.innerText = `you clicked ${count} times`;
-    fire.style.left=(event.offsetX)+"px";
-        fire.style.top=(event.offsetY-4)+"px";
-
-    showfire();
-
-});
-
-function showfire() {
-   fire.classList.toggle('show');
-   setTimeout(
-  toggleFire
-    ,1000)
 }
 
-function toggleFire() {
-    fire.classList.toggle('show');
+
+})
+setTime();
+function setTime() {
+const time = new Date();
+const hrs = time.getHours();
+hr = hrs>=12? hrs-12 : hrs;
+const min = time.getMinutes();
+const sec= time.getSeconds();
+const ampm = hrs>=12? 'PM' :'AM';
+
+showtime.innerHTML = `${hr>9 ? hr : '0'+hr} : ${min>9 ?min :'0'+min} : ${sec>9 ?sec:'0'+sec} ${ampm}`
 }
+
+setInterval( setTime,1000)

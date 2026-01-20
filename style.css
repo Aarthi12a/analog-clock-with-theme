@@ -1,58 +1,58 @@
-
+*{
+    margin:0;
+    padding:0px;
+    box-sizing: border-box;
+}
 body{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-}
-.ubuntu-light {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.smooch-sans-medium {
-  font-family: "Smooch Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+    min-height:100vh;
+    font-family: "Bitcount Single", system-ui;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .container{
-  position: relative;
-  width:400px;
-  height:290px;
-    cursor:pointer;
-overflow:hidden;
-  border:1px solid red;
+    border:1px solid red;
+    padding:20px;
+    border-radius:10px;
 }
 
-.image{
-  position:absolute;
-  background-size: cover;
-}
+.dark{
+    background-color:#202020;
+    color:white;
+        transition:  all 0.5s ease; 
 
-.fire-inside{
-  display:none;
-  position:absolute;
-  top:0px;
-  left:0px;
-  z-index:100;
-  color:rgb(236, 106, 0);
-  font-size:50px;
-text-shadow: 0px 0px 6px #ff0000;
-animation: grow 1s linear;
-  transform: translate(-50%, -50%) scale(0);
-  opacity:1;
-}
-.fire-inside.show{
-  display:block;
-}
-@keyframes grow {
  
-  to {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.3;
-  }
+ }
+
+ .bitcount-single-var {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 30px;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
 }
+.time{
+    font-size: 40px;
+}
+
+
+.button{
+    margin:40px auto;
+    border-radius:30px;
+    width:150px;
+    background:linear-gradient(rgb(255, 255, 255), rgb(212, 211, 211));
+    padding:10px 30px;
+    border: 2px solid rebeccapurple;
+    transition:  all 0.5s ease; 
+}
+ .button.dark{
+        background:linear-gradient(rgb(98, 98, 98), rgb(0, 0, 0));
+
+ }
+
 
