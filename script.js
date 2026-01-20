@@ -10,6 +10,8 @@ if(btn.classList.contains('dark')){
         btn.innerText='dark mode';
 
 }
+// console.log(btn.classList);
+
 
 
 })
@@ -24,5 +26,6 @@ const ampm = hrs>=12? 'PM' :'AM';
 
 showtime.innerHTML = `${hr>9 ? hr : '0'+hr} : ${min>9 ?min :'0'+min} : ${sec>9 ?sec:'0'+sec} ${ampm}`
 }
+
 
 setInterval( setTime,1000)
