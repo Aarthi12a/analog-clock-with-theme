@@ -54,5 +54,8 @@ body{
         background:linear-gradient(rgb(98, 98, 98), rgb(0, 0, 0));
 
  }
-
+.button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rebeccapurple;
+}
 
